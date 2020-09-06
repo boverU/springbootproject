@@ -13,32 +13,4 @@ public class SpringBootStartApplication {
 		SpringApplication.run(SpringBootStartApplication.class, args);
 	}
 
-	@RestController
-	class Resource {
-
-		@RequestMapping(method = RequestMethod.GET)
-		Message getMessage() {
-			return new Message("Hello World!");
-		}
-	}
-
-
-	class Message {
-		public String getMessage() {
-			return message;
-		}
-
-		@Override
-		public String toString() {
-			return "Message{" +
-					"message='" + message + '\'' +
-					'}';
-		}
-
-		private final String message;
-
-		Message(String message) {
-			this.message = message;
-		}
-	}
 }
